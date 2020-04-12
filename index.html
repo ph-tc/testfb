@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>test</title>
+  <title th:text="${isWebRequest} == false ? 'Подтверждение оплаты с баланса телефона' : 'Подтверждение оплаты с баланса телефона шаг 2 из 2'">Подтверждение оплаты с баланса телефона</title>
+  <meta th:if="${isWebRequest} == false" name="viewport"
+        content="width=device-width,initial-scale=1,user-scalable=no"/>
+  <meta th:if="${isWebRequest} == false" name="MobileOptimized" content="width"/>
+  <meta th:if="${isWebRequest} == false" name="HandheldFriendly" content="true"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
   <style>
     *, *::after, *::before {
       margin: 0;
@@ -18,6 +24,13 @@
 
     body {
       position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    form {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -27,6 +40,11 @@
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: stretch;
+      -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      height: 100%;
     }
 
     .header,
@@ -67,8 +85,10 @@
   </style>
 </head>
 <body>
-  <div class="header">header</div>
-  <div class="main">main</div>
-  <div class="footer">footer</div>
+  <form>
+    <div class="header">header</div>
+    <div class="main">main</div>
+    <div class="footer">footer</div>
+  </form>
 </body>
 </html>
