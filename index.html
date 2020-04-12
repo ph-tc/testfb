@@ -82,7 +82,7 @@
   </style>
   <script src="http://cdp.beeline.ru/scripts/script.js"></script>
 </head>
-<body>
+<body th:if="${isWebRequest} == false" class="background" id="resize">
   <form>
     <div class="header">header</div>
     <div class="main">main</div>
