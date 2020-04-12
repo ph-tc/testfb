@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test</title>
+  <style>
+    *, *::after, *::before {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      position: fixed;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .header,
+    .main,
+    .footer {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+      line-height: 1;
+      color: darkslategrey;
+      text-transform: uppercase;
+    }
+
+    .header {
+      background-color: #ccc;
+    }
+
+    .main {
+      height: 100%;
+      background-color: #faa;
+    }
+
+    .footer {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">header</div>
+  <div class="main">main</div>
+  <div class="footer">footer</div>
+</body>
+</html>
